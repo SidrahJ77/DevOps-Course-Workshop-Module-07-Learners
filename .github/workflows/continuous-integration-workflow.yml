@@ -13,7 +13,11 @@ jobs:
 
     - name: Test the C# codebase (.Net)
       working-directory: DotnetTemplate.web.Tests
-      run: dotnet test # Command to build TypeScript code
+      run: dotnet test # Command to test TypeScript code
+
+    - name: Install The TypeScript Code
+      working-directory: DotnetTemplate.Web
+      run: npm install # Command to install TypeScript code
 
     - name: Building The TypeScript Code
       working-directory: DotnetTemplate.Web
@@ -21,7 +25,7 @@ jobs:
 
     - name: Run The linter on the TypeScript Code
       working-directory: DotnetTemplate.Web
-      run: npm run lint # Command to build TypeScript code
+      run: npm run lint # Command to run TypeScript code
 
 
     - name: Send mail
