@@ -28,5 +28,5 @@ jobs:
       run: npm run lint # Command to run TypeScript code
 
     - name: Run the TypeScript Test
-      working-directory: DotnetTemplate.Web.Tests
+      working-directory: DotnetTemplate.Web
       run: npm t # Comman the run the TypeSript
